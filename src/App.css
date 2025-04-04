@@ -8,3 +8,16 @@
     margin: 5px;
     transition: border-color 0.3s;
 }
+
+.outer{
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inner{
+    background-color: green;
+    text-align: right;
+    transition: 0.5s ease-in;
+    
+}
