@@ -12,6 +12,7 @@ const Column = ({ title, tasks, onDelete, onComplete }: ColumnProps) => {
             id={task.id}
             title={task.title}
             description={task.description}
+            status={task.status}
             onDelete={onDelete}
             onComplete={onComplete}
           />

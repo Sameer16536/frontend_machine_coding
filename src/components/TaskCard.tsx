@@ -7,11 +7,12 @@ interface TaskCardProps {
   id: number;
   title: string;
   description: string;
+  status: "To Do" | "In Progress" | "Done";
   onDelete: (id: number) => void;
   onComplete: (id: number) => void;
 }
 
-const TaskCard = ({id ,title,description , onComplete,onDelete}:TaskCardProps) => {
+const TaskCard = ({id ,title,description ,status , onComplete,onDelete}:TaskCardProps) => {
 
   return (
     <div className="bg-white rounded-xl shadow p-4 mb-3 hover:shadow-lg transition-shadow duration-200">
@@ -28,13 +29,15 @@ const TaskCard = ({id ,title,description , onComplete,onDelete}:TaskCardProps) =
           >
             <BiTrash size={20} />
           </button>
-          <button
+{status !== "Done" && (
+            <button
             onClick={() => onComplete(id)}
             className="text-green-500 hover:text-green-600"
             title="Mark as Done"
           >
             <BiCheck size={20} />
           </button>
+)}
           <button
             className="text-blue-500 hover:text-blue-600"
             title="Edit (Coming Soon)"
