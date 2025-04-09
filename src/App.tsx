@@ -3,6 +3,7 @@ import { OTP } from "./components/OTP"
 import ProgressBar from "./components/ProgressBar"
 import Todo from "./components/Todo";
 import Board from "./pages/Board";
+import SearchComponent from "./components/SearchComponent";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       {/* <OTP/> */}
       {/* <ProgressBar progress={progress} /> */}
       {/* <Todo /> */}
+      <SearchComponent />
       <Board />
     </div>
   )
